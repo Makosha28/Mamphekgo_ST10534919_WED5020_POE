@@ -87,5 +87,53 @@ This repository contains Part 1:
 **Part 2 and Part 3 will follow in future submissions/edits** as per brief - will include JavaScript validation, full responsiveness, and SEO optimisation.
 
 ## Sitemap
+## How to View the Website
 
-Based on your proposal diagram (Page 6):
+1. Clone or download this repository.
+2. Open `index.html` in any modern web browser.
+3. Use the navigation menu to move between pages.
+
+No server is required for Part 1 (static HTML only).
+
+---
+
+## Changelog
+
+### [1.1.0] – 18 September 2026
+**Improvements after Formative 1 feedback**
+- Added comprehensive HTML comments explaining every major section of code
+- Restructured all pages with proper semantic HTML5 elements (`header`, `nav`, `main`, `section`, `footer`)
+- Made navigation consistent and functional on every page
+- Fixed incorrect social media links (Instagram / TikTok were previously swapped)
+- Improved content organisation and readability
+- Expanded README with full student details, goals, technical requirements, budget, timeline, changelog and references
+- Corrected broken tags and incomplete markup
+
+### [1.0.0] – August / September 2026
+- Initial creation of five HTML pages
+- Added images and basic content
+- First push of Proposal.pdf
+- Basic README created
+
+---
+
+## References
+
+1. MDN Web Docs – HTML elements reference.  
+   https://developer.mozilla.org/en-US/docs/Web/HTML/Element  
+   (Used for correct semantic HTML5 structure)
+
+2. W3C HTML5 Specification.  
+   https://www.w3.org/TR/html52/  
+   (Guidance on document structure and accessibility)
+
+3. Google Maps Platform – Embed a map.  
+   https://developers.google.com/maps/documentation/embed/get-started  
+   (Used for location maps on the Contact page)
+
+4. IIE / Rosebank College – WEDE5020 Module Guide and Assessment Rubric 2026.  
+   (Official requirements for Formative 1 / POE Part 1)
+
+5. Courage To Rise Charity – Information obtained through interview with founder Lucia and community sources (primary research).
+
+6. “We Rise by Lifting Others” – Quote attributed to Robert Ingersoll (public domain / commonly cited motivational 
