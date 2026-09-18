@@ -189,6 +189,10 @@ This repository contains Part 1:
 ## Mobile view
 ![Mobile View](images/mobile-view.png)
 
+git add images/desktop-view.png images/tablet-view.png images/mobile-view.png README.md
+git commit -m "Part 2: Add responsive design screenshots to README"
+git push
+
 ## References
 
 1. MDN Web Docs – CSS Reference.  
