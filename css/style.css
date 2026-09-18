@@ -134,11 +134,12 @@ main {
 }
 
 section {
-    background-color: #ffffff;
+    background-color: #AD1457;
     padding: 1.75rem;
     margin-bottom: 1.75rem;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+   border: 1px solid #880E4F;
 }
 
 section img {
