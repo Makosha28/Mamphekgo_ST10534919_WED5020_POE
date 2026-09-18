@@ -217,3 +217,5 @@ This repository contains Part 1:
 **End of README**  
 Last updated: September 2026  
 Student: Makosha Dorcus Shudai Mamphekgo (ST10534919)
+git add README.md
+git commit -m "Part 2: Update README with detailed Changelog, colour palette, technical requirements and references"
