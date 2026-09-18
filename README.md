@@ -182,12 +182,12 @@ This repository contains Part 1:
 | White             | `#FFFFFF` | Content cards            |
 
 
-### Desktop View
-
-### Tablet view
-
-### Mobile view
-
+## Desktop View
+![Desktop View](images/desktop-view.png)
+## Tablet view
+![Tablet View](images/tablet-view.png)
+## Mobile view
+![Mobile View](images/mobile-view.png)
 
 ## References
 
