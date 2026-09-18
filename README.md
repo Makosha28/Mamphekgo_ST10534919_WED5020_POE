@@ -123,21 +123,11 @@ This repository contains Part 1:
 
 6. “We Rise by Lifting Others” – Quote attributed to Robert Ingersoll (public domain / commonly cited motivational 
 
----
-
-## How to View the Website
-
-1. Clone or download this repository.
-2. Open `index.html` in any modern web browser.
-3. Use the navigation menu to move between pages.
-4. Resize the browser window or use developer tools to test responsive behaviour (desktop / tablet / mobile).
-
----
-
+##### Part 2
 ## Changelog
 
-### [2.0.0] – September 2026 (Part 2 – CSS & Responsive Design)
-**Major Part 2 implementation**
+### September 2026 (Part 2 – CSS & Responsive Design)
+
 
 - Created external stylesheet `css/style.css` and linked it correctly to **all five** HTML pages.
 - Applied a consistent base style (font family, font size, colour scheme, margins/padding, CSS reset).
@@ -154,10 +144,10 @@ This repository contains Part 1:
 - Navigation stacks vertically on very small screens for better usability.
 - Updated this README with Part 2 information, expanded Changelog and References.
 
-### [1.1.0] – 18 September 2026 (Feedback corrections from Part 1)
-**Improvements after Formative 1 feedback**
+**Improvements to Formative 1 feedback**
 
-- Added comprehensive HTML comments explaining every major section of code on all pages.
+-Updated my README file
+- Added HTML comments explaining every major section of code on all pages.
 - Restructured all pages with proper semantic HTML5 elements (`header`, `nav`, `main`, `section`, `article`, `footer`).
 - Made navigation consistent and functional on every page.
 - Fixed incorrect social media links (Instagram / TikTok were previously swapped).
@@ -165,13 +155,7 @@ This repository contains Part 1:
 - Expanded README with student details, goals, technical requirements, budget, timeline, changelog and references.
 - Corrected broken tags and incomplete markup.
 
-### [1.0.0] – August / September 2026
-- Initial creation of five HTML pages.
-- Added images and basic content.
-- First push of Proposal.pdf.
-- Basic README created.
 
----
 
 ## Technical Requirements (Part 2)
 
@@ -186,7 +170,7 @@ This repository contains Part 1:
 
 ---
 
-## Colour Palette Used
+## Colours Used
 
 | Role              | Hex       | Description              |
 |-------------------|-----------|--------------------------|
@@ -197,29 +181,6 @@ This repository contains Part 1:
 | Text              | `#333333` | High readability         |
 | White             | `#FFFFFF` | Content cards            |
 
----
-
-## Budget (Estimated)
-
-| Item                        | Estimated Cost (ZAR) |
-|-----------------------------|----------------------|
-| Domain name (1 year)        | R150 – R250          |
-| Basic hosting / GitHub Pages| R0 (free tier)       |
-| Mobile data for development | R300 – R500          |
-| Image editing / optimisation| R100 – R200          |
-| Contingency                 | R200                 |
-| **Total estimated**         | **R750 – R1 150**    |
-
----
-
-## Timeline and Milestones
-
-| Phase     | Approximate Period | Milestone                          | Deliverable                                      |
-|-----------|--------------------|------------------------------------|--------------------------------------------------|
-| Week 1–2  | April–May 2026     | Research, Proposal, Wireframes     | Proposal document + sitemap                      |
-| Week 3–5  | May–June 2026      | Part 1 Development                 | 5 HTML pages + semantic structure + comments     |
-| Week 6–8  | June–July 2026     | Part 2 – CSS & Responsive          | External stylesheet + full responsive design     |
-| Week 9–10 | July 2026         | Part 3 – JS, SEO, Testing, Deploy  | Form validation, meta tags, final deployment     |
 
 
 ## References
