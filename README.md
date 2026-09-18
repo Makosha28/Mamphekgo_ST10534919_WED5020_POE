@@ -127,3 +127,131 @@ This repository contains Part 1:
 5. Courage To Rise Charity – Information obtained through interview with founder Lucia and community sources (primary research).
 
 6. “We Rise by Lifting Others” – Quote attributed to Robert Ingersoll (public domain / commonly cited motivational 
+
+---
+
+## How to View the Website
+
+1. Clone or download this repository.
+2. Open `index.html` in any modern web browser.
+3. Use the navigation menu to move between pages.
+4. Resize the browser window or use developer tools to test responsive behaviour (desktop / tablet / mobile).
+
+---
+
+## Changelog
+
+### [2.0.0] – September 2026 (Part 2 – CSS & Responsive Design)
+**Major Part 2 implementation**
+
+- Created external stylesheet `css/style.css` and linked it correctly to **all five** HTML pages.
+- Applied a consistent base style (font family, font size, colour scheme, margins/padding, CSS reset).
+- Implemented comprehensive typography styles (`font-family`, `font-size`, `font-weight`, `line-height`, `letter-spacing`).
+- Built a clear layout structure using Flexbox for the navigation and overall page flow.
+- Applied visual styles: colour palette (teal #2A9D8F, deep navy #264653, warm coral #E76F51, cream background), borders, box-shadows, and rounded corners.
+- Added interactive pseudo-classes (`:hover`, `:focus`, `:active`) on navigation links and anchors.
+- Implemented full responsive design with media queries for:
+  - Desktop (default + large screens ≥ 1100px)
+  - Tablet (≤ 768px)
+  - Mobile (≤ 480px)
+- Used relative units (`rem`, `%`) throughout for better scalability.
+- Images scale responsively (`max-width: 100%`).
+- Navigation stacks vertically on very small screens for better usability.
+- Updated this README with Part 2 information, expanded Changelog and References.
+
+### [1.1.0] – 18 September 2026 (Feedback corrections from Part 1)
+**Improvements after Formative 1 feedback**
+
+- Added comprehensive HTML comments explaining every major section of code on all pages.
+- Restructured all pages with proper semantic HTML5 elements (`header`, `nav`, `main`, `section`, `article`, `footer`).
+- Made navigation consistent and functional on every page.
+- Fixed incorrect social media links (Instagram / TikTok were previously swapped).
+- Improved content organisation and readability.
+- Expanded README with student details, goals, technical requirements, budget, timeline, changelog and references.
+- Corrected broken tags and incomplete markup.
+
+### [1.0.0] – August / September 2026
+- Initial creation of five HTML pages.
+- Added images and basic content.
+- First push of Proposal.pdf.
+- Basic README created.
+
+---
+
+## Technical Requirements (Part 2)
+
+- **External CSS:** Single stylesheet (`css/style.css`) linked from every page.
+- **Base styles:** CSS reset, consistent font stack, colour scheme, spacing.
+- **Typography:** Clear hierarchy with consistent sizing and line-height.
+- **Layout:** Flexbox used for navigation and overall page structure.
+- **Visual design:** Cohesive colour palette, shadows, rounded corners, accent borders.
+- **Interactivity:** `:hover`, `:focus` and `:active` states on links.
+- **Responsive:** Media queries at 768px and 480px breakpoints; relative units (`rem`, `%`).
+- **Images:** Responsive (`max-width: 100%; height: auto`).
+
+---
+
+## Colour Palette Used
+
+| Role              | Hex       | Description              |
+|-------------------|-----------|--------------------------|
+| Primary (Teal)    | `#2A9D8F` | Hope, growth, trust      |
+| Dark (Navy)       | `#264653` | Header / footer / headings |
+| Accent (Coral)    | `#E76F51` | Calls-to-action, energy  |
+| Background        | `#F9F7F4` | Warm off-white           |
+| Text              | `#333333` | High readability         |
+| White             | `#FFFFFF` | Content cards            |
+
+---
+
+## Budget (Estimated)
+
+| Item                        | Estimated Cost (ZAR) |
+|-----------------------------|----------------------|
+| Domain name (1 year)        | R150 – R250          |
+| Basic hosting / GitHub Pages| R0 (free tier)       |
+| Mobile data for development | R300 – R500          |
+| Image editing / optimisation| R100 – R200          |
+| Contingency                 | R200                 |
+| **Total estimated**         | **R750 – R1 150**    |
+
+---
+
+## Timeline and Milestones
+
+| Phase     | Approximate Period | Milestone                          | Deliverable                                      |
+|-----------|--------------------|------------------------------------|--------------------------------------------------|
+| Week 1–2  | April–May 2026     | Research, Proposal, Wireframes     | Proposal document + sitemap                      |
+| Week 3–5  | May–June 2026      | Part 1 Development                 | 5 HTML pages + semantic structure + comments     |
+| Week 6–8  | June–July 2026     | Part 2 – CSS & Responsive          | External stylesheet + full responsive design     |
+| Week 9–10 | July 2026         | Part 3 – JS, SEO, Testing, Deploy  | Form validation, meta tags, final deployment     |
+
+
+## References
+
+1. MDN Web Docs – CSS Reference.  
+   https://developer.mozilla.org/en-US/docs/Web/CSS  
+   (Used for properties, Flexbox, media queries and responsive techniques)
+
+2. MDN Web Docs – HTML elements reference.  
+   https://developer.mozilla.org/en-US/docs/Web/HTML/Element  
+   (Semantic HTML5 structure)
+
+3. W3C CSS Specifications.  
+   https://www.w3.org/Style/CSS/  
+   (Cascading and cascade order understanding)
+
+4. Google Maps Platform – Embed a map.  
+   https://developers.google.com/maps/documentation/embed/get-started  
+   (Location maps on Contact page)
+
+5. IIE / Rosebank College – WEDE5020 Module Guide and Assessment Rubric 2026.  
+   (Official requirements for Part 1 and Part 2)
+
+6. Courage To Rise Charity – Primary information obtained through interview with founder Lucia and community sources.
+
+7. “We Rise by Lifting Others” – Quote attributed to Robert Ingersoll (public domain / commonly cited motivational quote).
+
+**End of README**  
+Last updated: September 2026  
+Student: Makosha Dorcus Shudai Mamphekgo (ST10534919)
