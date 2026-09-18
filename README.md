@@ -10,7 +10,7 @@ Courage To Rise Charity - Official Website Development
 - **Year:** 2026
 - **Repository Link:** https://github.com/Makosha28/Mamphekgo_ST10534919_WED5020_POE/tree/main
 
-## Project Overview (Complete)
+## Project Overview
 Courage To Rise Charity was started by a 19-year-old girl from Tembisa with a passion for helping others. It started as an activity from Miss Teen Gauteng beauty pageant competition, but grew into a deep connection with empowerment and giving back.
 
 Lucia noticed that many children from townships and rural areas live in fear - fear of unknown, failure and judgment - and let it make decisions for them. Courage To Rise is becoming a voice against fear through educational programs about fear and making donations with the help of the community and MMR bakery.
@@ -126,7 +126,7 @@ This repository contains Part 1:
 # Part 2
 ## Changelog
 
-### September 2026 (Part 2 – CSS & Responsive Design)
+### (Part 2 – CSS & Responsive Design)
 
 
 - Created external stylesheet `css/style.css` and linked it correctly to **all five** HTML pages.
@@ -181,6 +181,12 @@ This repository contains Part 1:
 | Text              | `#333333` | High readability         |
 | White             | `#FFFFFF` | Content cards            |
 
+
+### Desktop View
+
+### Tablet view
+
+### Mobile view
 
 
 ## References
