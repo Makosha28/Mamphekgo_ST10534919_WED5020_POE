@@ -1,8 +1,3 @@
-# Mamphekgo_ST10534919_WED5020_POE
-Courage to rise charity
-# Courage To Rise Charity - Website Project
-### WED5020 POE Part 1 | WEDE5020
-
 ## Project Title
 Courage To Rise Charity - Official Website Development
 
