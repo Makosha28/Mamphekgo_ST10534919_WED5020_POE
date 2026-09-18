@@ -99,7 +99,7 @@ No server is required for Part 1 (static HTML only).
 
 ## Changelog
 
-### [1.1.0] – 18 September 2026
+### 18 September 2026
 **Improvements after Formative 1 feedback**
 - Added comprehensive HTML comments explaining every major section of code
 - Restructured all pages with proper semantic HTML5 elements (`header`, `nav`, `main`, `section`, `footer`)
@@ -109,13 +109,6 @@ No server is required for Part 1 (static HTML only).
 - Expanded README with full student details, goals, technical requirements, budget, timeline, changelog and references
 - Corrected broken tags and incomplete markup
 
-### [1.0.0] – August / September 2026
-- Initial creation of five HTML pages
-- Added images and basic content
-- First push of Proposal.pdf
-- Basic README created
-
----
 
 ## References
 
