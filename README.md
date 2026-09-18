@@ -67,7 +67,7 @@ The goal is to provide information about the charity and Lucia's journey for tho
 
 **Budget:** R2000 - R2500 (Domain renewal, hosting, data)
 
-## Part 1 Details (Current Submission)
+## Part 1 Details
 
 This repository contains Part 1:
 
@@ -84,7 +84,6 @@ This repository contains Part 1:
 
 4. **Documentation:** `/docs/` - Contains Website Proposal PDF
 
-**Part 2 and Part 3 will follow in future submissions/edits** as per brief - will include JavaScript validation, full responsiveness, and SEO optimisation.
 
 ## Sitemap
 ## How to View the Website
@@ -93,14 +92,12 @@ This repository contains Part 1:
 2. Open `index.html` in any modern web browser.
 3. Use the navigation menu to move between pages.
 
-No server is required for Part 1 (static HTML only).
-
----
 
 ## Changelog
 
-### 18 September 2026
+### 13 September 2026
 **Improvements after Formative 1 feedback**
+-Added comments to my code
 - Added comprehensive HTML comments explaining every major section of code
 - Restructured all pages with proper semantic HTML5 elements (`header`, `nav`, `main`, `section`, `footer`)
 - Made navigation consistent and functional on every page
