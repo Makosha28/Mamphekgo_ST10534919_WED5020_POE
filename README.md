@@ -48,17 +48,17 @@ The goal is to provide information about the charity and Lucia's journey for tho
 
 ## Timeline and Milestones
 
-| Phase | Date | Milestone | Deliverable |
-| :--- | :--- | :--- | :--- |
-| Week 1 | April 2025 | Research & Organisation Approval | Chose Courage To Rise Charity, interviewed founder |
-| Week 2 | April 2025 | Proposal & Planning | Website Proposal Document completed |
-| Week 3 | May 2025 | Sitemap & Wireframes | Created sitemap diagram and Figma wireframes |
-| Week 4 | May 2025 | Part 1 Development | 5 HTML pages (Home, About, Services, Enquiry, Contact) + CSS |
-| Week 5 | May 2025 | Part 1 Submission | Push to private GitHub repo + Submit Proposal on Learn |
-| Week 6-7 | June 2025 | Part 2 - Styling & Responsive | Implement colour scheme, typography, media queries |
-| Week 8 | June 2025 | Part 2 - JavaScript | Form validation, lightbox gallery |
-| Week 9 | July 2025 | Part 3 - SEO & Testing | Lighthouse test, optimise images, meta tags |
-| Week 10 | July 2025 | Final Deployment | Deploy to GitHub Pages / Netlify, Final README, Demo Video |
+ | Period | Milestone | Deliverable |
+ | :--- | :--- | :--- |
+ | July 2026 | Research & Organisation Approval | Chose Courage To Rise Charity, interviewed founder |
+ | July 2026 | Proposal & Planning | Website Proposal Document completed |
+ | July 2026 | Sitemap & Wireframes | Created sitemap diagram and Figma wireframes |
+ | July 2026 | Part 1 Development | 5 HTML pages (Home, About, Services, Enquiry, Contact) + CSS |
+ | July 2026 | Part 1 Submission | Push to private GitHub repo + Submit Proposal on Learn |
+ | September 2026 | Part 2 - Styling & Responsive | Implement colour scheme, typography, media queries |
+ | September 2026 | Part 2 - JavaScript | Form validation, lightbox gallery |
+| October 2026 | Part 3 - SEO & Testing | Lighthouse test, optimise images, meta tags |
+ | October 2026 | Final Deployment | Deploy to GitHub Pages / Netlify, Final README, Demo Video |
 
 **Budget:** R2000 - R2500 (Domain renewal, hosting, data)
 
@@ -123,7 +123,7 @@ This repository contains Part 1:
 
 6. “We Rise by Lifting Others” – Quote attributed to Robert Ingersoll (public domain / commonly cited motivational 
 
-##### Part 2
+# Part 2
 ## Changelog
 
 ### September 2026 (Part 2 – CSS & Responsive Design)
