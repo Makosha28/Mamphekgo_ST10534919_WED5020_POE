@@ -183,7 +183,7 @@ This repository contains Part 1:
 
 
 ## Desktop View
-![Desktop View](images/desktop-view.png)
+![Desktop View](images/desktop-view(2).png)
 ## Tablet view
 ![Tablet View](images/tablet-view.png)
 ## Mobile view
