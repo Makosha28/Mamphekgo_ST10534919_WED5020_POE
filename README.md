@@ -73,18 +73,18 @@ This repository contains Part 1:
     - `enquiry.html` - Form of details + funding form
     - `contact.html` - Location, Map, Banking Details
 
-2. **CSS:** `/css/style.css` - External stylesheet
+2. **CSS:** /css/style.css - External stylesheet
 
-3. **Assets:** `/images/` - Optimised photos of charity events (from proposal)
+3. **Assets:** /images/ - Optimised photos of charity events (from proposal)
 
-4. **Documentation:** `/docs/` - Contains Website Proposal PDF
+4. **Documentation:** /docs/ - Contains Website Proposal PDF
 
 
 ## Sitemap
 ## How to View the Website
 
 1. Clone or download this repository.
-2. Open `index.html` in any modern web browser.
+2. Open index.html in any modern web browser.
 3. Use the navigation menu to move between pages.
 
 
@@ -94,7 +94,7 @@ This repository contains Part 1:
 **Improvements after Formative 1 feedback**
 -Added comments to my code
 - Added comprehensive HTML comments explaining every major section of code
-- Restructured all pages with proper semantic HTML5 elements (`header`, `nav`, `main`, `section`, `footer`)
+- Restructured all pages with proper semantic HTML5 elements (header, nav, main, section, footer)
 - Made navigation consistent and functional on every page
 - Fixed incorrect social media links (Instagram / TikTok were previously swapped)
 - Improved content organisation and readability
@@ -129,18 +129,18 @@ This repository contains Part 1:
 ### (Part 2 – CSS & Responsive Design)
 
 
-- Created external stylesheet `css/style.css` and linked it correctly to **all five** HTML pages.
+- Created external stylesheet css/style.css and linked it correctly to **all five** HTML pages.
 - Applied a consistent base style (font family, font size, colour scheme, margins/padding, CSS reset).
-- Implemented comprehensive typography styles (`font-family`, `font-size`, `font-weight`, `line-height`, `letter-spacing`).
+- Implemented comprehensive typography styles (font-family, font-size, font-weight, line-height, letter-spacing).
 - Built a clear layout structure using Flexbox for the navigation and overall page flow.
 - Applied visual styles: colour palette (teal #2A9D8F, deep navy #264653, warm coral #E76F51, cream background), borders, box-shadows, and rounded corners.
-- Added interactive pseudo-classes (`:hover`, `:focus`, `:active`) on navigation links and anchors.
+- Added interactive pseudo-classes (:hover, :focus, :active) on navigation links and anchors.
 - Implemented full responsive design with media queries for:
   - Desktop (default + large screens ≥ 1100px)
   - Tablet (≤ 768px)
   - Mobile (≤ 480px)
-- Used relative units (`rem`, `%`) throughout for better scalability.
-- Images scale responsively (`max-width: 100%`).
+- Used relative units (rem, %) throughout for better scalability.
+- Images scale responsively (max-width: 100%).
 - Navigation stacks vertically on very small screens for better usability.
 - Updated this README with Part 2 information, expanded Changelog and References.
 
@@ -148,7 +148,7 @@ This repository contains Part 1:
 
 -Updated my README file
 - Added HTML comments explaining every major section of code on all pages.
-- Restructured all pages with proper semantic HTML5 elements (`header`, `nav`, `main`, `section`, `article`, `footer`).
+- Restructured all pages with proper semantic HTML5 elements (header, nav, main, section, article, footer).
 - Made navigation consistent and functional on every page.
 - Fixed incorrect social media links (Instagram / TikTok were previously swapped).
 - Improved content organisation and readability.
@@ -159,14 +159,14 @@ This repository contains Part 1:
 
 ## Technical Requirements (Part 2)
 
-- **External CSS:** Single stylesheet (`css/style.css`) linked from every page.
+- **External CSS:** Single stylesheet (css/style.css) linked from every page.
 - **Base styles:** CSS reset, consistent font stack, colour scheme, spacing.
 - **Typography:** Clear hierarchy with consistent sizing and line-height.
 - **Layout:** Flexbox used for navigation and overall page structure.
 - **Visual design:** Cohesive colour palette, shadows, rounded corners, accent borders.
-- **Interactivity:** `:hover`, `:focus` and `:active` states on links.
-- **Responsive:** Media queries at 768px and 480px breakpoints; relative units (`rem`, `%`).
-- **Images:** Responsive (`max-width: 100%; height: auto`).
+- **Interactivity:** :hover, :focus and :active states on links.
+- **Responsive:** Media queries at 768px and 480px breakpoints; relative units (rem, %).
+- **Images:** Responsive (max-width: 100%; height: auto).
 
 ---
 
