@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- 
-        Page: Home Page
+    <!--
+        Page: Home
         Purpose: Main landing page for Courage To Rise Charity.
         Student: Makosha Dorcus Shudai Mamphekgo | ST10534919 | WEDE5020
-        Part 2: Linked to external CSS for styling and responsive design.
+        Part 2 & 3: External CSS, responsive design, SEO meta, JS enhancements.
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Courage To Rise Charity - Empowering young people from townships and rural areas to overcome fear and achieve their dreams.">
+    <meta name="description" content="Courage To Rise Charity – Empowering young people from townships and rural areas to overcome fear and achieve their dreams. Donate, volunteer or get involved.">
+    <meta name="keywords" content="Courage To Rise, charity South Africa, youth empowerment, Tembisa, donation, overcome fear, Lucia charity">
+    <meta name="author" content="Makosha Dorcus Shudai Mamphekgo">
     <title>Home | Courage To Rise Charity</title>
-    
-    <!-- External CSS Stylesheet (Part 2 requirement) -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- HEADER & NAVIGATION -->
     <header>
-        <h1>Courage To Rise Charity</h1>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-inner">
+            <h1>Courage To Rise Charity</h1>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section id="hero">
-            <img src="images/Hero.JPG" alt="Courage To Rise Charity - Young people empowered to rise above fear" width="600" height="400">
+            <img src="images/Hero.JPG" alt="Courage To Rise Charity – Young people empowered to rise above fear" width="600" height="400">
             <h2>The Woman Behind The Magic</h2>
             <p><strong>The goal is to build confidence and help those in need.</strong></p>
         </section>
@@ -50,6 +51,9 @@
         <section id="call-to-action">
             <h2>How You Can Help</h2>
             <p>Your support makes a real difference. Visit our <a href="enquiry.html">Enquiry</a> page to choose how you would like to support, or go to the <a href="contact.html">Contact</a> page for banking details and locations.</p>
+            <p style="margin-top:1rem;">
+                <a href="enquiry.html" class="btn btn-primary">Support Us Today</a>
+            </p>
         </section>
     </main>
 
@@ -60,7 +64,6 @@
         <p>&copy; 2026 Courage To Rise Charity. All rights reserved.</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
-git add index.html
-git commit -m 
