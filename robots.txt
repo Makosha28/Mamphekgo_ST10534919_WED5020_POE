@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://makosha28.github.io/Mamphekgo_ST10534919_WED5020_POE/sitemap.xml
