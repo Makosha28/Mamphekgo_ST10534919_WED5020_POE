@@ -29,6 +29,55 @@
             </ul>
         </nav>
     </header>
+        <main>
+        <section class="page-header">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you. Send a message or use the details below.</p>
+        </section>
+
+        <section class="contact-grid">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><strong>Location:</strong> Tembisa / Johannesburg area, Gauteng</p>
+                <p><strong>Email:</strong> <a href="mailto:info@couragetorise.org.za">info@couragetorise.org.za</a></p>
+                <p><strong>Banking Details:</strong><br>
+                   Account Name: Courage To Rise Charity<br>
+                   Bank: (Add your bank)<br>
+                   Account Number: (Add number)<br>
+                   Branch Code: (Add code)
+                </p>
+                <p><strong>Social Media:</strong><br>
+                   Instagram & TikTok – search for Lucia / Courage To Rise
+                </p>
+
+                <div id="map" style="height: 300px; margin-top: 1.5rem; border-radius: 8px;"></div>
+            </div>
+
+            <div class="form-section">
+                <h3>Send a Message</h3>
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="contactName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="contactName" name="fullName" required minlength="2">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email Address <span class="required">*</span></label>
+                        <input type="email" id="contactEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject <span class="required">*</span></label>
+                        <input type="text" id="subject" name="subject" required minlength="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Your Message <span class="required">*</span></label>
+                        <textarea id="contactMessage" name="message" rows="5" required minlength="15"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div id="contactResponse"></div>
+            </div>
+        </section>
+    </main>
 
     <!--MAIN CONTENT-->
     <main>
