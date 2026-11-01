@@ -103,26 +103,28 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ===== Simple Lightbox for Gallery =====
-  document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('click', function () {
-      const overlay = document.createElement('div');
-      overlay.className = 'lightbox-overlay';
-      overlay.innerHTML = `
-        <div class="lightbox-content">
-          <img src="${this.src}" alt="${this.alt}">
-          <button class="lightbox-close" aria-label="Close">&times;</button>
-        </div>
-      `;
-      document.body.appendChild(overlay);
+// ===== Simple Lightbox for Gallery =====
+document.querySelectorAll('.gallery-item').forEach(img => {
+  img.addEventListener('click', function () {
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = `
+      <div class="lightbox-content">
+        <img src="${this.src}" alt="${this.alt || 'Enlarged image'}">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+      </div>
+    `;
+    document.body.appendChild(overlay);
 
-      const close = () => overlay.remove();
-      overlay.querySelector('.lightbox-close').onclick = close;
-      overlay.onclick = (e) => { if (e.target === overlay) close(); };
-      document.addEventsListener('keydown' function esc(e){
-        if (e.key === 'Escape'){ close(); document.removeEventListener('keydown', esc);}
+    const close = () => overlay.remove();
+    overlay.querySelector('.lightbox-close').onclick = close;
+    overlay.onclick = (e) => { if (e.target === overlay) close(); };
+    document.addEventListener('keydown', function esc(e) {
+      if (e.key === 'Escape') { close(); document.removeEventListener('keydown', esc); }
     });
   });
 });
+  
   // ===== Form Validation - Enquiry =====
   const enquiryForm = document.getElementById('enquiryForm');
   if (enquiryForm) {
