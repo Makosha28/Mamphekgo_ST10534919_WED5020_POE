@@ -115,11 +115,14 @@ document.addEventListener('DOMContentLoaded', function () {
       `;
       document.body.appendChild(overlay);
 
-      overlay.querySelector('.lightbox-close').onclick = () => overlay.remove();
-      overlay.onclick = (e) => { if (e.target === overlay) overlay.remove(); };
+      const close = () => overlay.remove();
+      overlay.querySelector('.lightbox-close').onclick = close;
+      overlay.onclick = (e) => { if (e.target === overlay) close(); };
+      document.addEventsListener('keydown' function esc(e){
+        if (e.key === 'Escape'){ close(); document.removeEventListener('keydown', esc);}
     });
   });
-
+});
   // ===== Form Validation - Enquiry =====
   const enquiryForm = document.getElementById('enquiryForm');
   if (enquiryForm) {
