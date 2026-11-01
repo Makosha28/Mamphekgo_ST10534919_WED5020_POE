@@ -367,6 +367,14 @@ footer hr {
 }
 
 /* ========== CONTACT PAGE ========== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+
 #social-and-phone ul,
 #locations article {
     margin-bottom: 1.5rem;
@@ -377,6 +385,15 @@ footer hr {
     padding: 1.25rem;
     border-radius: 10px;
     border: 1px solid #ece7e0;
+}
+
+#map {
+    height: 320px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
 
 iframe {
@@ -390,6 +407,28 @@ iframe {
 }
 
 /* ========== SERVICES ========== */
+.search-section {
+    text-align: center;
+    margin: 1.5rem 0 2rem;
+}
+
+#serviceSearch {
+    width: 100%;
+    max-width: 420px;
+    padding: 0.85rem 1.2rem;
+    border: 2px solid #2A9D8F;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0.5rem 0 2rem;
+}
+
 .service-card {
     display: flex;
     flex-direction: column;
