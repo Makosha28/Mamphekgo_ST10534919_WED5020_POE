@@ -14,23 +14,28 @@ Page: Contact
     <meta name="author" content="Makosha Mamphekgo">
     <title>Contact | Courage To Rise Charity</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
-    <!--HEADER & NAVIGATION-->
+
+/*Header & Navigation*/
     <header>
-        <h1>Courage To Rise Charity</h1>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-inner">
+            <h1>Courage To Rise Charity</h1>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-        <main>
+
+    <main>
         <section class="page-header">
             <h2>Contact Us</h2>
             <p>We would love to hear from you. Send a message or use the details below.</p>
@@ -41,20 +46,21 @@ Page: Contact
                 <h3>Get in Touch</h3>
                 <p><strong>Location:</strong> Tembisa / Johannesburg area, Gauteng</p>
                 <p><strong>Email:</strong> <a href="mailto:mamphekgonthabiseng@gmail.com">mamphekgonthabiseng@gmail.com</a></p>
+                <p><strong>Phone / WhatsApp:</strong> <a href="tel:+27798197295">+27 79 819 7295</a></p>
 
-                <div id="map" style="height: 300px; margin-top: 1.5rem; border-radius: 8px;"></div>
+                <div id="map" aria-label="Interactive map showing Courage To Rise location in Tembisa area"></div>
             </div>
 
-            <div class="form-section">
+            <div class="form-section" style="margin:0;">
                 <h3>Send a Message</h3>
                 <form id="contactForm" novalidate>
                     <div class="form-group">
                         <label for="contactName">Full Name <span class="required">*</span></label>
-                        <input type="text" id="contactName" name="fullName" required minlength="2">
+                        <input type="text" id="contactName" name="fullName" required minlength="2" autocomplete="name">
                     </div>
                     <div class="form-group">
                         <label for="contactEmail">Email Address <span class="required">*</span></label>
-                        <input type="email" id="contactEmail" name="email" required>
+                        <input type="email" id="contactEmail" name="email" required autocomplete="email">
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject <span class="required">*</span></label>
@@ -71,48 +77,37 @@ Page: Contact
         </section>
     </main>
 
-    <!--MAIN CONTENT-->
     <main>
-        <!-- Social media and phone contact section -->
         <section id="social-and-phone">
             <h2>Find Us on Social Media</h2>
-            
-            <!-- Corrected social media links (previously swapped) -->
             <ul>
                 <li>
                     Instagram: 
-                    <a href="https://www.instagram.com/baybee_luu" target="_blank" rel="noopener">@baybee_luu</a>
+                    <a href="https://www.instagram.com/baybee_luu" target="_blank" rel="noopener noreferrer">@baybee_luu</a>
                 </li>
                 <li>
                     TikTok: 
-                    <a href="https://www.tiktok.com/@mankaija1" target="_blank" rel="noopener">@mankaija1</a>
+                    <a href="https://www.tiktok.com/@mankaija1" target="_blank" rel="noopener noreferrer">@mankaija1</a>
                 </li>
             </ul>
-
-            <h3>Call or Text Us</h3>
-            <ul>
-                <li>Phone / WhatsApp: <a href="tel:+27798197295"></a></li>
-            </ul>
         </section>
-
-        <!-- Physical locations with embedded Google Maps -->
+        
+    /*PHYSICAL LOCATIONS WITH EMBEDDED MAPS*/
         <section id="locations">
             <h2>Our Locations</h2>
             <p>For those who would like to make donations or visit us in person:</p>
 
-            <!-- Location 1: University of Limpopo -->
             <article>
                 <h3>University of Limpopo</h3>
                 <p>
-                    <a href="https://maps.app.goo.gl/HfA6cPCxLib4WjHc9" target="_blank" rel="noopener">
+                    <a href="https://maps.app.goo.gl/HfA6cPCxLib4WjHc9" target="_blank" rel="noopener noreferrer">
                         View on Google Maps
                     </a>
                 </p>
-                <!-- Embedded Google Map for University of Limpopo -->
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.0225576951766!2d29.735975074518063!3d-23.88881877857622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6c8fdb773fbe1%3A0xaa4588ea6501ac39!2sUniversity%20of%20Limpopo!5e0!3m2!1sen!2sza!4v1786730674480!5m2!1sen!2sza" 
                     width="600" 
-                    height="450" 
+                    height="320" 
                     style="border:0;" 
                     allowfullscreen="" 
                     loading="lazy" 
@@ -120,20 +115,18 @@ Page: Contact
                     title="Map of University of Limpopo">
                 </iframe>
             </article>
-
-            <!-- Location 2: Winnie Mandela Zone 8 -->
+/*SECOND LOCATION*/
             <article>
                 <h3>Winnie Mandela Zone 8, 8902</h3>
                 <p>
-                    <a href="https://maps.app.goo.gl/c9zAtDrVvHPVoDWU9" target="_blank" rel="noopener">
+                    <a href="https://maps.app.goo.gl/c9zAtDrVvHPVoDWU9" target="_blank" rel="noopener noreferrer">
                         View on Google Maps
                     </a>
                 </p>
-                <!-- Embedded Google Map for Winnie Mandela Zone 8 -->
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d27450.172386178612!2d28.225788857685288!3d-25.97461365701767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWinnie%20mandela%20zone%208%208902!5e0!3m2!1sen!2sza!4v1786730053413!5m2!1sen!2sza" 
                     width="600" 
-                    height="450" 
+                    height="320" 
                     style="border:0;" 
                     allowfullscreen="" 
                     loading="lazy" 
@@ -142,9 +135,8 @@ Page: Contact
                 </iframe>
             </article>
         </section>
-
-        <!-- Banking / donation details placeholder section -->
-        <!-- Note: Add real banking details when available -->
+        
+/*BANKING DETAILS*/
         <section id="donation-details">
             <h2>How to Donate</h2>
             <p>
@@ -157,16 +149,17 @@ Page: Contact
             </p>
         </section>
     </main>
-
-    <!--FOOTER -->
+    
+/*FOOTER*/
     <footer>
         <hr>
         <p>We would appreciate your support</p>
         <p>Developer: Makosha Mamphekgo | Student Number: ST10534919 | WEDE5020</p>
         <p>&copy; 2026 Courage To Rise Charity. All rights reserved.</p>
     </footer>
-    <script src="js/script.js"></script>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
 git add contact.html
