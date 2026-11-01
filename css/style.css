@@ -732,15 +732,15 @@ iframe {
 @media screen and (min-width: 1100px) {
     .header-inner,
     main {
-        max-width: 1200px;
+        max-width: 1280px;
     }
 
     main {
-        padding: 1.5rem 1.75rem 1.75rem;
+        padding: 1.6rem 2rem 1.8rem;
     }
 
     section {
-        padding: 1.5rem 1.75rem;
+        padding: 1.6rem 2rem;
         margin-bottom: 1.1rem;
     }
 
@@ -749,7 +749,7 @@ iframe {
     }
 
     #hero img {
-        max-width: 60%;
+        max-width: 68%;
     }
 
     #team .team-grid img {
@@ -762,6 +762,6 @@ iframe {
     }
 
     .contact-grid {
-        gap: 1.5rem;
+        gap: 1.75rem;
     }
 }
