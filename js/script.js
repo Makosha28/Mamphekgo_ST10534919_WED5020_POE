@@ -158,6 +158,58 @@ if (teamCard && teamModal) {
     }
   });
 }
+// ===== Team Slider (Swipeable) =====
+(function () {
+  const slides = document.querySelectorAll('.team-slider .slide');
+  const dots = document.querySelectorAll('.slider-dots .dot');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  const track = document.querySelector('.slider-track');
+
+  if (!slides.length) return;
+
+  let current = 0;
+  let startX = 0;
+  let isDragging = false;
+
+  function showSlide(index) {
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+    current = index;
+
+    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', () => showSlide(current - 1));
+  if (nextBtn) nextBtn.addEventListener('click', () => showSlide(current + 1));
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      showSlide(parseInt(dot.dataset.index, 10));
+    });
+  });
+
+  // Touch / swipe support
+  if (track) {
+    track.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e) => {
+      if (!isDragging) return;
+      const endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) showSlide(current + 1);
+        else showSlide(current - 1);
+      }
+      isDragging = false;
+    }, { passive: true });
+  }
+})();
   // ===== Form Validation - Enquiry =====
   const enquiryForm = document.getElementById('enquiryForm');
   if (enquiryForm) {
