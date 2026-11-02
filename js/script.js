@@ -219,112 +219,136 @@ if (teamCard && teamModal) {
     }, { passive: true });
   }
 })();
-  // ===== Form Validation - Enquiry =====
-  const enquiryForm = document.getElementById('enquiryForm');
-  if (enquiryForm) {
-    enquiryForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      let valid = true;
+// ===== Form Validation - Enquiry =====
+const enquiryForm = document.getElementById('enquiryForm');
+if (enquiryForm) {
+  enquiryForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let valid = true;
 
-      // Clear previous errors
-      this.querySelectorAll('.error-message').forEach(el => el.remove());
-      this.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+    // Clear previous errors
+    this.querySelectorAll('.error-message').forEach(el => el.remove());
+    this.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
 
-      const name = this.querySelector('#fullName');
-      const email = this.querySelector('#email');
-      const phone = this.querySelector('#phone');
-      const type = this.querySelector('#enquiryType');
-      const message = this.querySelector('#message');
+    const name = this.querySelector('#fullName');
+    const email = this.querySelector('#email');
+    const phone = this.querySelector('#phone');
+    const type = this.querySelector('#enquiryType');
+    const message = this.querySelector('#message');
 
-      function showError(input, msg) {
-        valid = false;
-        input.classList.add('error');
-        const span = document.createElement('span');
-        span.className = 'error-message';
-        span.textContent = msg;
-        input.parentNode.appendChild(span);
+    function showError(input, msg) {
+      valid = false;
+      input.classList.add('error');
+      const span = document.createElement('span');
+      span.className = 'error-message';
+      span.textContent = msg;
+      input.parentNode.appendChild(span);
+    }
+
+    if (!name.value.trim() || name.value.trim().length < 2) {
+      showError(name, 'Please enter your full name (at least 2 characters).');
+    }
+    if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+      showError(email, 'Please enter a valid email address.');
+    }
+    if (phone.value.trim() && !/^(\+27|0)[0-9]{9}$/.test(phone.value.replace(/\s/g, ''))) {
+      showError(phone, 'Please enter a valid South African phone number.');
+    }
+    if (!type.value) {
+      showError(type, 'Please select the type of enquiry.');
+    }
+    if (!message.value.trim() || message.value.trim().length < 15) {
+      showError(message, 'Please write a message of at least 15 characters.');
+    }
+
+    if (valid) {
+      // Build mailto
+      const subject = encodeURIComponent(`Enquiry: ${type.options[type.selectedIndex].text} - ${name.value.trim()}`);
+      const body = encodeURIComponent(
+        `Full Name: ${name.value.trim()}\n` +
+        `Email: ${email.value.trim()}\n` +
+        `Phone: ${phone.value.trim() || 'Not provided'}\n` +
+        `Type of Enquiry: ${type.options[type.selectedIndex].text}\n\n` +
+        `Message:\n${message.value.trim()}`
+      );
+
+      // Open email client
+      window.location.href = `mailto:mamphekgonthabiseng@gmail.com?subject=${subject}&body=${body}`;
+
+      // Show success message
+      const responseBox = document.getElementById('enquiryResponse');
+      if (responseBox) {
+        responseBox.innerHTML = `
+          <div class="success-box">
+            <h3>Thank you, ${name.value.trim()}!</h3>
+            <p>Your email client should now open with the enquiry ready to send. Please click <strong>Send</strong> in your email app.</p>
+            <p>We will respond within 2 working days.</p>
+            <p><strong>Reference:</strong> ENQ-${Date.now().toString().slice(-6)}</p>
+          </div>
+        `;
+        responseBox.scrollIntoView({ behavior: 'smooth' });
       }
+      enquiryForm.reset();
+    }
+  });
+}
+// ===== Form Validation - Contact =====
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let valid = true;
 
-      if (!name.value.trim() || name.value.trim().length < 2) {
-        showError(name, 'Please enter your full name (at least 2 characters).');
+    this.querySelectorAll('.error-message').forEach(el => el.remove());
+    this.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+
+    const name = this.querySelector('#contactName');
+    const email = this.querySelector('#contactEmail');
+    const subject = this.querySelector('#subject');
+    const message = this.querySelector('#contactMessage');
+
+    function showError(input, msg) {
+      valid = false;
+      input.classList.add('error');
+      const span = document.createElement('span');
+      span.className = 'error-message';
+      span.textContent = msg;
+      input.parentNode.appendChild(span);
+    }
+
+    if (!name.value.trim() || name.value.trim().length < 2) showError(name, 'Please enter your full name.');
+    if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) showError(email, 'Please enter a valid email.');
+    if (!subject.value.trim() || subject.value.trim().length < 5) showError(subject, 'Please enter a subject.');
+    if (!message.value.trim() || message.value.trim().length < 15) showError(message, 'Please write a message of at least 15 characters.');
+
+    if (valid) {
+      // Build mailto
+      const mailSubject = encodeURIComponent(subject.value.trim());
+      const body = encodeURIComponent(
+        `Full Name: ${name.value.trim()}\n` +
+        `Email: ${email.value.trim()}\n\n` +
+        `Message:\n${message.value.trim()}`
+      );
+
+      // Open email client
+      window.location.href = `mailto:mamphekgonthabiseng@gmail.com?subject=${mailSubject}&body=${body}`;
+
+      // Show success message
+      const responseBox = document.getElementById('contactResponse');
+      if (responseBox) {
+        responseBox.innerHTML = `
+          <div class="success-box">
+            <h3>Message Ready to Send!</h3>
+            <p>Thank you, ${name.value.trim()}. Your email client should now open with the message ready. Please click <strong>Send</strong>.</p>
+            <p><strong>Reference:</strong> MSG-${Date.now().toString().slice(-6)}</p>
+          </div>
+        `;
+        responseBox.scrollIntoView({ behavior: 'smooth' });
       }
-      if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-        showError(email, 'Please enter a valid email address.');
-      }
-      if (phone.value.trim() && !/^(\+27|0)[0-9]{9}$/.test(phone.value.replace(/\s/g, ''))) {
-        showError(phone, 'Please enter a valid South African phone number.');
-      }
-      if (!type.value) {
-        showError(type, 'Please select the type of enquiry.');
-      }
-      if (!message.value.trim() || message.value.trim().length < 15) {
-        showError(message, 'Please write a message of at least 15 characters.');
-      }
-
-      if (valid) {
-        // Success response
-        const responseBox = document.getElementById('enquiryResponse');
-        if (responseBox) {
-          responseBox.innerHTML = `
-            <div class="success-box">
-              <h3>Thank you, ${name.value.trim()}!</h3>
-              <p>Your enquiry has been received. We will respond within 2 working days with information about availability, next steps or how you can support Courage To Rise.</p>
-              <p><strong>Reference:</strong> ENQ-${Date.now().toString().slice(-6)}</p>
-            </div>
-          `;
-          responseBox.scrollIntoView({ behavior: 'smooth' });
-        }
-        enquiryForm.reset();
-      }
-    });
-  }
-
-  // ===== Form Validation - Contact =====
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      let valid = true;
-
-      this.querySelectorAll('.error-message').forEach(el => el.remove());
-      this.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
-
-      const name = this.querySelector('#contactName');
-      const email = this.querySelector('#contactEmail');
-      const subject = this.querySelector('#subject');
-      const message = this.querySelector('#contactMessage');
-
-      function showError(input, msg) {
-        valid = false;
-        input.classList.add('error');
-        const span = document.createElement('span');
-        span.className = 'error-message';
-        span.textContent = msg;
-        input.parentNode.appendChild(span);
-      }
-
-      if (!name.value.trim() || name.value.trim().length < 2) showError(name, 'Please enter your full name.');
-      if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) showError(email, 'Please enter a valid email.');
-      if (!subject.value.trim() || subject.value.trim().length < 5) showError(subject, 'Please enter a subject.');
-      if (!message.value.trim() || message.value.trim().length < 15) showError(message, 'Please write a message of at least 15 characters.');
-
-      if (valid) {
-        const responseBox = document.getElementById('contactResponse');
-        if (responseBox) {
-          responseBox.innerHTML = `
-            <div class="success-box">
-              <h3>Message Sent Successfully!</h3>
-              <p>Thank you, ${name.value.trim()}. Your message has been compiled and will be sent to the Courage To Rise team.</p>
-              <p><strong>Reference:</strong> MSG-${Date.now().toString().slice(-6)}</p>
-            </div>
-          `;
-          responseBox.scrollIntoView({ behavior: 'smooth' });
-        }
-        contactForm.reset();
-      }
-    });
-  }
-
+      contactForm.reset();
+    }
+  });
+}
   // ===== Leaflet Map (Contact page) =====
   if (document.getElementById('map') && typeof L !== 'undefined') {
     // Approximate Tembisa / Johannesburg area
