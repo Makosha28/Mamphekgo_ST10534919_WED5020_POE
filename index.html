@@ -5,29 +5,107 @@
         Page: Home
         Purpose: Main landing page for Courage To Rise Charity.
         Student: Makosha Dorcus Shudai Mamphekgo | ST10534919 | WEDE5020
-        Part 2 & 3: External CSS, responsive design, SEO meta, JS enhancements.
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Courage To Rise Charity – Empowering young people from townships and rural areas to overcome fear and achieve their dreams. Donate, volunteer or get involved.">
-    <meta name="keywords" content="Courage To Rise, charity South Africa, youth empowerment, Tembisa, donation, overcome fear, Lucia charity">
+    <meta name="description" content="Welcome to Courage To Rise Charity – Empowering young people from townships and rural areas to overcome fear and achieve their dreams. Donate, volunteer or get involved today.">
+    <meta name="keywords" content="Courage To Rise, charity South Africa, youth empowerment, Tembisa, donation, overcome fear, Lucia charity, volunteer">
     <meta name="author" content="Makosha Dorcus Shudai Mamphekgo">
     <title>Home | Courage To Rise Charity</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Welcome Splash Screen */
+        #welcome-screen {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, #264653 0%, #2A9D8F 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+
+        #welcome-screen.hide {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        #welcome-screen h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.75rem;
+            color: #fff;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        }
+
+        #welcome-screen p {
+            font-size: 1.15rem;
+            max-width: 420px;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        #welcome-screen .welcome-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.7);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        }
+
+        #enterBtn {
+            background: #E76F51;
+            color: #fff;
+            border: none;
+            padding: 0.9rem 2.2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.25s ease, transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        #enterBtn:hover {
+            background: #d45a3d;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            #welcome-screen h1 {
+                font-size: 1.7rem;
+            }
+            #welcome-screen .welcome-img {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
 </head>
 <body>
+
+    <!-- WELCOME SPLASH SCREEN -->
+    <div id="welcome-screen">
+        <img src="images/Hero.JPG" alt="Courage To Rise Charity" class="welcome-img">
+        <h1>Welcome to Courage To Rise Charity</h1>
+        <p>Empowering young people to rise above fear and achieve their dreams</p>
+        <button id="enterBtn">Enter Site</button>
+    </div>
 
     <header>
         <div class="header-inner">
             <h1>Courage To Rise Charity</h1>
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                 <span class="bar"></span>
-                 <span class="bar"></span>
-                 <span class="bar"></span>
-            </button>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="enquiry.html">Enquiry</a></li>
@@ -39,39 +117,70 @@
 
     <main>
         <section id="hero">
-            <img src="images/Hero.JPG" alt="Courage To Rise Charity – Young people empowered to rise above fear" width="600" height="400">
-            <h2>The Woman Behind The Magic</h2>
-            <p><strong>The goal is to build confidence and help those in need.</strong></p>
+            <h2>Welcome to Courage To Rise Charity</h2>
+            <p><strong>Empowering young people to rise above fear and achieve their dreams.</strong></p>
+            <img src="images/Hero.JPG" 
+                 alt="Courage To Rise Charity – Young people empowered to rise above fear" 
+                 width="700" height="420" loading="eager" class="gallery-item"
+                 title="Click to view larger">
+        </section>
+
+        <section id="gallery-preview">
+            <h2>Our Work in Action</h2>
+            <p>Real moments from the Courage To Rise community</p>
+            <div class="image-row">
+                <img src="images/Members.JPG" 
+                     alt="Courage To Rise Charity team members" 
+                     width="280" height="200" loading="lazy" class="gallery-item"
+                     title="Click to view larger">
+                <img src="images/0a9f3744-d963-4fa5-8a0e-63f9776d7343.JPG" 
+                     alt="Community activities and early days of the charity" 
+                     width="280" height="200" loading="lazy" class="gallery-item"
+                     title="Click to view larger">
+                <img src="images/67eea97a-1eb4-4d6e-b303-c966ac4514ad.JPG" 
+                     alt="Young people empowered by Courage To Rise programmes" 
+                     width="280" height="200" loading="lazy" class="gallery-item"
+                     title="Click to view larger">
+                <img src="images/Charity home.JPG" 
+                     alt="Courage To Rise Charity home and community support" 
+                     width="280" height="200" loading="lazy" class="gallery-item"
+                     title="Click to view larger">
+            </div>
         </section>
 
         <section id="mission-statement">
-            <h2>Life is a rollercoaster. We can do all things through Christ who strengthens us — and your confidence is our victory.</h2>
-            <p>The pain of not having someone who hugs you when you get home becomes a wound. Together with the provision of clothes, food and sanitary towels, we hug those who need them.</p>
-            <p>Some wounds stay with you for a lifetime. The pain of not knowing what you are going to eat tomorrow kills the passion and vision of becoming better. Together as beautiful and blessed children of God we can make a better tomorrow and inspire young people living with fear and limited resources that delay their plans.</p>
-            <p>What you donate leaves a smile on the faces of those who are in need and have wounds of not having enough daily. We aim to build a society where every young person will believe that they can achieve whatever they want to achieve, with a mind that is free from limitations and fears.</p>
-            <p>This charity empowers orphanages to develop self-empowerment and be proud of their beauty, because staying at a shelter does not limit your dreams.</p>
+            <h2>Our Purpose</h2>
+            <p>Life is a rollercoaster. We can do all things through Christ who strengthens us — and your confidence is our victory.</p>
+            <p>Together with the provision of clothes, food and sanitary towels, we hug those who need them. Some wounds stay with you for a lifetime. The pain of not knowing what you are going to eat tomorrow kills passion and vision.</p>
+            <p>What you donate leaves a smile on the faces of those in need. We aim to build a society where every young person believes they can achieve whatever they want, free from limitations and fears.</p>
         </section>
 
         <section id="call-to-action">
             <h2>How You Can Help</h2>
             <p>Your support makes a real difference. Visit our <a href="enquiry.html">Enquiry</a> page to choose how you would like to support, or go to the <a href="contact.html">Contact</a> page for banking details and locations.</p>
-            <p style="margin-top:1rem;">
+            <p style="margin-top:1.25rem;">
                 <a href="enquiry.html" class="btn btn-primary">Support Us Today</a>
             </p>
         </section>
     </main>
 
     <footer>
-    <hr>
-    <p>We would appreciate your support</p>
-    <p class="visitor-stats">
-        <span id="visitorCount">Visitors: —</span> &nbsp;|&nbsp; 
-        <span id="interactionCount">Interactions: —</span>
-    </p>
-    <p>Developer: Makosha Mamphekgo | Student Number: ST10534919 | WEDE5020</p>
-    <p>&copy; 2026 Courage To Rise Charity. All rights reserved.</p>
+        <hr>
+        <p>We would appreciate your support</p>
+        <p class="visitor-stats">
+            <span id="visitorCount">Visitors: —</span> &nbsp;|&nbsp; 
+            <span id="interactionCount">Interactions: —</span>
+        </p>
+        <p>Developer: Makosha Mamphekgo | Student Number: ST10534919 | WEDE5020</p>
+        <p>&copy; 2026 Courage To Rise Charity. All rights reserved.</p>
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        // Welcome screen - user must click to enter
+        document.getElementById('enterBtn').addEventListener('click', function () {
+            document.getElementById('welcome-screen').classList.add('hide');
+        });
+    </script>
 </body>
 </html>
