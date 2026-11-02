@@ -251,9 +251,6 @@ git push
 - Strengthened visual consistency and accessibility
 
 
-## Deployment
-The website is deployed on a free platform (GitHub Pages / Netlify).  
-All pages should load without errors.
 
 **Live Link:** * https://makosha28.github.io/Mamphekgo_ST10534919_WED5020_POE/ *
 
