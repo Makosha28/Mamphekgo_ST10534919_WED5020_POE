@@ -218,8 +218,78 @@ git push
 
 7. “We Rise by Lifting Others” – Quote attributed to Robert Ingersoll (public domain / commonly cited motivational quote).
 
+### Part 3 – November 2026
+**JavaScript & Interactivity**
+- Added fully functional mobile navigation toggle
+- Implemented team card that opens a modal gallery
+- Added lightbox functionality for images
+- Created dynamic services listing with real-time search
+- Built comprehensive client-side form validation with user-friendly error messages
+- Added success response boxes with reference numbers after form submission
+- Integrated Leaflet interactive map on the Contact page
+- Added visitor and interaction counter using localStorage
+
+**SEO Improvements**
+- Added unique title tags, meta descriptions and meta keywords to all pages
+- Created robots.txt and sitemap.xml
+- Improved image alt text across the site
+- Ensured consistent semantic HTML structure
+
+**Layout & User Experience**
+- Improved desktop/laptop layout (max-width 1280px)
+- Tightened spacing and form layout
+- Made About Us page more concise
+- Improved responsive behaviour on tablet and mobile
+- Created a good structure of the form
+- Made images become one item and clickable
+
+**Feedback from Part 2**
+- Fixed inconsistent header structure across pages
+- Made sure that my css is applied to every page.
+- Removed duplicate main elements
+- Improved form usability and validation feedback
+- Strengthened visual consistency and accessibility
+
+
+## Deployment
+The website is deployed on a free platform (GitHub Pages / Netlify).  
+All pages should load without errors.
+
+**Live Link:** **
+
+---
+
+## References
+1. MDN Web Docs – HTML elements reference.  
+   https://developer.mozilla.org/en-US/docs/Web/HTML/Element  
+   (Semantic HTML5 structure)
+
+2. MDN Web Docs – CSS Reference.  
+   https://developer.mozilla.org/en-US/docs/Web/CSS  
+   (Layout, Flexbox, media queries and responsive design)
+
+3. MDN Web Docs – JavaScript Guide.  
+   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide  
+   (DOM manipulation, events and form validation)
+
+4. Leaflet.js Documentation.  
+   https://leafletjs.com/  
+   (Interactive map implementation)
+
+5. Google Search Central – SEO Starter Guide.  
+   https://developers.google.com/search/docs/fundamentals/seo-starter-guide  
+   (Title tags, meta descriptions and on-page SEO)
+
+6. W3C HTML5 Specification.  
+   https://www.w3.org/TR/html52/  
+   (Document structure and accessibility guidance)
+
+7. IIE / Rosebank College – WEDE5020 Module Guide and Assessment Rubric 2026.  
+   (Official project requirements)
+
+8. Courage To Rise Charity – Primary information obtained through interview with founder Lucia and community sources.
+
+
 **End of README**  
-Last updated: September 2026  
+Last updated: November 2026  
 Student: Makosha Dorcus Shudai Mamphekgo (ST10534919)
-git add README.md
-git commit -m "Part 2: Update README with detailed Changelog, colour palette, technical requirements and references"
