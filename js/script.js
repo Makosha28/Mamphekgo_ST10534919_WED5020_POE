@@ -102,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // ===== Simple Lightbox for Gallery =====
 // ===== Simple Lightbox for Gallery =====
 document.querySelectorAll('.gallery-item').forEach(img => {
   img.addEventListener('click', function () {
@@ -124,7 +123,41 @@ document.querySelectorAll('.gallery-item').forEach(img => {
     });
   });
 });
-  
+
+// ===== Team Card Modal =====
+const teamCard = document.getElementById('teamCard');
+const teamModal = document.getElementById('teamModal');
+const teamModalClose = document.querySelector('.team-modal-close');
+
+if (teamCard && teamModal) {
+  teamCard.addEventListener('click', function () {
+    teamModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+
+  if (teamModalClose) {
+    teamModalClose.addEventListener('click', function () {
+      teamModal.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  }
+
+  // Close when clicking outside the modal content
+  teamModal.addEventListener('click', function (e) {
+    if (e.target === teamModal) {
+      teamModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Close with Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && teamModal.classList.contains('open')) {
+      teamModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+}
   // ===== Form Validation - Enquiry =====
   const enquiryForm = document.getElementById('enquiryForm');
   if (enquiryForm) {
@@ -246,3 +279,42 @@ document.querySelectorAll('.gallery-item').forEach(img => {
   }
 
 });
+// ===== Visitor & Interaction Counter =====
+(function () {
+  // Unique visitor (once per browser)
+  let visitors = parseInt(localStorage.getItem('ctr_visitors') || '0', 10);
+  if (!localStorage.getItem('ctr_visited')) {
+    visitors += 1;
+    localStorage.setItem('ctr_visitors', visitors);
+    localStorage.setItem('ctr_visited', 'yes');
+  }
+
+  // Interactions (clicks on important elements)
+  let interactions = parseInt(localStorage.getItem('ctr_interactions') || '0', 10);
+
+  function updateDisplay() {
+    const vEl = document.getElementById('visitorCount');
+    const iEl = document.getElementById('interactionCount');
+    if (vEl) vEl.textContent = 'Visitors: ' + visitors;
+    if (iEl) iEl.textContent = 'Interactions: ' + interactions;
+  }
+
+  updateDisplay();
+
+  // Count meaningful interactions
+  document.addEventListener('click', function (e) {
+    const target = e.target;
+    if (
+      target.closest('a') ||
+      target.closest('button') ||
+      target.closest('.team-card') ||
+      target.closest('.gallery-item') ||
+      target.closest('.btn') ||
+      target.closest('form')
+    ) {
+      interactions += 1;
+      localStorage.setItem('ctr_interactions', interactions);
+      updateDisplay();
+    }
+  });
+})();
