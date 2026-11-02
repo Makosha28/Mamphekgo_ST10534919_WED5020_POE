@@ -36,37 +36,43 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ===== Dynamic Services + Search =====
   const servicesData = [
-    {
-      title: "Educational Programs about Fear",
-      category: "education",
-      description: "Workshops and talks that help young people from townships and rural areas understand and overcome fear of failure, judgment and the unknown."
-    },
-    {
-      title: "Donation Drives",
-      category: "donation",
-      description: "Collection and distribution of clothes, food parcels and sanitary towels to orphanages and families in need."
-    },
-    {
-      title: "Confidence Building Workshops",
-      category: "empowerment",
-      description: "Sessions that empower young people to believe in themselves and pursue their dreams without limitations."
-    },
-    {
-      title: "Community Support & Outreach",
-      category: "community",
-      description: "Working with local partners such as MMR Bakery and community members to reach more beneficiaries."
-    },
-    {
-      title: "Sanitary Towel Project",
-      category: "donation",
-      description: "Providing sanitary towels so that girls do not miss school or feel ashamed because of lack of resources."
-    },
-    {
-      title: "Youth Mentorship",
-      category: "empowerment",
-      description: "One-on-one and group mentorship for young people who need guidance and encouragement."
-    }
-  ];
+  {
+    title: "Educational Programs about Fear",
+    category: "education",
+    description: "Workshops and talks that help young people from townships and rural areas understand and overcome fear of failure, judgment and the unknown.",
+    image: "images/Work.JPG"
+  },
+  {
+    title: "Donation Drives",
+    category: "donation",
+    description: "Collection and distribution of clothes, food parcels and sanitary towels to orphanages and families in need.",
+    image: "images/Lucia.JPG"
+  },
+  {
+    title: "Confidence Building Workshops",
+    category: "empowerment",
+    description: "Sessions that empower young people to believe in themselves and pursue their dreams without limitations.",
+    image: "images/Members.JPG"
+  },
+  {
+    title: "Community Support & Outreach",
+    category: "community",
+    description: "Working with local partners such as MMR Bakery and community members to reach more beneficiaries.",
+    image: "images/Charity home.JPG"
+  },
+  {
+    title: "Sanitary Towel Project",
+    category: "donation",
+    description: "Providing sanitary towels so that girls do not miss school or feel ashamed because of lack of resources.",
+    image: "images/67eea97a-1eb4-4d6e-b303-c966ac4514ad.JPG"
+  },
+  {
+    title: "Youth Mentorship",
+    category: "empowerment",
+    description: "One-on-one and group mentorship for young people who need guidance and encouragement.",
+    image: "images/8ffe0e62-37c6-49a1-a1b2-9abc603f2eb1.JPG"
+  }
+];
 
   const servicesContainer = document.getElementById('servicesContainer');
   const searchInput = document.getElementById('serviceSearch');
@@ -77,13 +83,16 @@ document.addEventListener('DOMContentLoaded', function () {
       servicesContainer.innerHTML = '<p class="no-results">No services match your search.</p>';
       return;
     }
-    servicesContainer.innerHTML = list.map(s => `
-      <div class="service-card">
-        <h3>${s.title}</h3>
-        <span class="badge">${s.category}</span>
-        <p>${s.description}</p>
-      </div>
-    `).join('');
+   servicesContainer.innerHTML = list.map(s => `
+  <div class="service-card">
+    <img src="${s.image}" alt="${s.title}" class="service-card-img" loading="lazy">
+    <div class="service-card-body">
+      <span class="badge">${s.category}</span>
+      <h3>${s.title}</h3>
+      <p>${s.description}</p>
+    </div>
+  </div>
+`).join('');
   }
 
   if (servicesContainer) {
