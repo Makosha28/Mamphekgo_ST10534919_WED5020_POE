@@ -45,7 +45,19 @@ a:focus {
 ul {
     list-style-position: inside;
 }
-
+#welcome-screen {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #264653 0%, #2A9D8F 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+}
 /* ========== TYPOGRAPHY ========== */
 h1, h2, h3, h4 {
     font-weight: 700;
